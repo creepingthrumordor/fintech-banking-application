@@ -6,7 +6,7 @@ import '../pages/bill_reminders_sheet.dart';
 import '../pages/voice_search_dialog.dart';
 import '../pages/receipt_page.dart';
 
-/// Material 3 Card wrapper with authentic rounded corners and dynamic surface tint
+/// Card wrapper with rounded corners and a dynamic surface color.
 class M3Card extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
@@ -67,7 +67,7 @@ class M3Card extends StatelessWidget {
   }
 }
 
-/// Material 3 Section Header with title and optional action chip
+/// Section header with a title and optional action.
 class M3SectionRow extends StatelessWidget {
   final String title;
   final String? actionLabel;
@@ -125,7 +125,7 @@ class M3SectionRow extends StatelessWidget {
   }
 }
 
-/// Material 3 Rounded Chip matching the Design Kit (e.g. "✓ Enabled", "✓ Focused")
+/// Rounded selection chip.
 class M3CheckChip extends StatelessWidget {
   final String label;
   final bool isSelected;
@@ -164,7 +164,7 @@ class M3CheckChip extends StatelessWidget {
   }
 }
 
-/// Material 3 Pill Search Bar with prominent Voice Search Icon
+/// Pill-shaped search bar with a voice search action.
 class M3SearchBar extends StatelessWidget {
   final TextEditingController? controller;
   final ValueChanged<String>? onChanged;
@@ -257,7 +257,7 @@ class M3SearchBar extends StatelessWidget {
   }
 }
 
-/// Material 3 Personalized Financial Recommendations Widget
+/// Carousel of personalized financial recommendations.
 class M3RecommendationsCarousel extends StatelessWidget {
   final List<FinancialRecommendation> recommendations;
   final ValueChanged<Widget>? onPush;
@@ -416,7 +416,7 @@ class M3RecommendationsCarousel extends StatelessWidget {
   }
 }
 
-/// Material 3 Upcoming Bill Reminders Quick Card
+/// Card showing upcoming bill reminders.
 class M3BillRemindersCard extends StatelessWidget {
   final List<BillReminder> bills;
   final Function(BillReminder bill) onBillPaid;
@@ -545,7 +545,7 @@ class M3BillRemindersCard extends StatelessWidget {
   }
 }
 
-/// Material 3 Budgeting Tips Quick Banner
+/// Banner linking to budgeting tips.
 class M3BudgetTipsBanner extends StatelessWidget {
   const M3BudgetTipsBanner({super.key});
 
@@ -620,7 +620,7 @@ class M3BudgetTipsBanner extends StatelessWidget {
   }
 }
 
-/// Material 3 Squircle Floating Action Button matching the Design Kit
+/// Rounded floating action button.
 class M3FloatingActionButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onTap;

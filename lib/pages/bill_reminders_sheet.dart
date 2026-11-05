@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/models.dart';
 import 'receipt_page.dart';
 
-/// Shows an interactive Material 3 Upcoming Bill Reminders Sheet
+/// Shows an upcoming bill reminders sheet.
 void showBillRemindersSheet({
   required BuildContext context,
   required Function(BillReminder bill) onBillPaid,

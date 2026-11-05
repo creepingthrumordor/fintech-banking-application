@@ -1,5 +1,3 @@
-// FinTrust Digital Banking — Material 3 Design Edition
-
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -15,7 +13,7 @@ import 'widgets/m3_widgets.dart';
 
 void main() => runApp(const FinTrustApp());
 
-// APP ENTRY POINT: Material 3 with Dynamic Theme Support
+// APP ENTRY POINT
 class FinTrustApp extends StatelessWidget {
   const FinTrustApp({super.key});
 
@@ -458,7 +456,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // Total Balance Card (Material 3 Purple Gradient)
+          // Total Balance Card (Purple Gradient)
           _BalanceCard(balance: balance),
 
           const SizedBox(height: 18),
@@ -726,8 +724,8 @@ class _BalanceCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(28),
         gradient: const LinearGradient(
           colors: [
-            Color(0xFF6750A4), // M3 Violet
-            Color(0xFF4F378B), // Deep M3 Plum/Indigo
+            Color(0xFF6750A4), // Violet
+            Color(0xFF4F378B), // Deep plum/indigo
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -1906,7 +1904,7 @@ class _ActivityPageState extends State<ActivityPage> {
   }
 }
 
-// PAGE: ACCOUNT / SETTINGS (Includes Dark Mode Switch & M3 Controls)
+// PAGE: ACCOUNT / SETTINGS (Includes Dark Mode Switch & Controls)
 class AccountPage extends StatelessWidget {
   const AccountPage({
     required this.onPush,
@@ -1993,7 +1991,7 @@ class AccountPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Material 3 Switch with checkmark/icon
+                // Switch with checkmark icon
                 Switch(
                   value: isDark,
                   onChanged: (val) => AppTheme.toggleTheme(),
@@ -3221,7 +3219,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           behavior: SnackBarBehavior.floating,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
           backgroundColor: colorScheme.error,
           content: Text(
             'Please enter your 6-character access code.',
@@ -3249,7 +3248,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
         backgroundColor: colorScheme.primary,
         content: Row(
           children: [
-            Icon(Icons.check_circle_rounded, color: colorScheme.onPrimary, size: 22),
+            Icon(Icons.check_circle_rounded,
+                color: colorScheme.onPrimary, size: 22),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
@@ -3311,7 +3311,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         shape: BoxShape.circle,
                       ),
                       child: Center(
-                        child: Icon(Icons.key_rounded, color: colorScheme.primary, size: 22),
+                        child: Icon(Icons.key_rounded,
+                            color: colorScheme.primary, size: 22),
                       ),
                     ),
                     const SizedBox(width: 14),
@@ -3349,11 +3350,13 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
                         backgroundColor: colorScheme.primary,
                         content: Text(
                           'Recovery link sent to +1 (***) ***-8291',
-                          style: GoogleFonts.outfit(color: colorScheme.onPrimary),
+                          style:
+                              GoogleFonts.outfit(color: colorScheme.onPrimary),
                         ),
                       ),
                     );
@@ -3369,11 +3372,13 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         behavior: SnackBarBehavior.floating,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
                         backgroundColor: colorScheme.primary,
                         content: Text(
                           'Password reset instructions sent to registered email.',
-                          style: GoogleFonts.outfit(color: colorScheme.onPrimary),
+                          style:
+                              GoogleFonts.outfit(color: colorScheme.onPrimary),
                         ),
                       ),
                     );
@@ -3527,7 +3532,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         backgroundColor: colorScheme.primary,
                         content: Text(
                           'Connecting to FinTrust 24/7 Phone Support: 1-800-346-8787',
-                          style: GoogleFonts.outfit(color: colorScheme.onPrimary),
+                          style:
+                              GoogleFonts.outfit(color: colorScheme.onPrimary),
                         ),
                       ),
                     );
@@ -3627,7 +3633,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 4),
                           decoration: BoxDecoration(
                             color: colorScheme.primaryContainer,
                             borderRadius: BorderRadius.circular(100),
@@ -3676,15 +3683,19 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         ),
                         suffixIcon: IconButton(
                           icon: Icon(
-                            _obscureCode ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                            _obscureCode
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
                             color: colorScheme.onSurfaceVariant,
                             size: 20,
                           ),
-                          onPressed: () => setState(() => _obscureCode = !_obscureCode),
+                          onPressed: () =>
+                              setState(() => _obscureCode = !_obscureCode),
                         ),
                         hintText: 'Enter 6-digit code',
                         hintStyle: GoogleFonts.outfit(
-                          color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
+                          color: colorScheme.onSurfaceVariant
+                              .withValues(alpha: 0.6),
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
                           letterSpacing: 0,
@@ -3692,8 +3703,10 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         filled: true,
                         fillColor: isDark
                             ? colorScheme.surfaceContainerHigh
-                            : colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                            : colorScheme.surfaceContainerHighest
+                                .withValues(alpha: 0.4),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 14),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(14),
                           borderSide: BorderSide(
@@ -3732,7 +3745,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                           onTap: () => _showForgotCodeSheet(context),
                           borderRadius: BorderRadius.circular(4),
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 2, horizontal: 4),
                             child: Text(
                               'Forgot code?',
                               style: GoogleFonts.outfit(
@@ -3762,7 +3776,8 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                                 height: 20,
                                 child: CircularProgressIndicator(
                                   strokeWidth: 2,
-                                  valueColor: AlwaysStoppedAnimation<Color>(colorScheme.onPrimary),
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                      colorScheme.onPrimary),
                                 ),
                               )
                             : Text(
@@ -4137,9 +4152,8 @@ class _FaceScanModalState extends State<_FaceScanModal>
                           : colorScheme.primaryContainer,
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: _verified
-                            ? AppTheme.success
-                            : colorScheme.primary,
+                        color:
+                            _verified ? AppTheme.success : colorScheme.primary,
                         width: 2.5,
                       ),
                     ),
@@ -4149,9 +4163,8 @@ class _FaceScanModalState extends State<_FaceScanModal>
                             ? Icons.check_circle_rounded
                             : Icons.account_circle_outlined,
                         size: 52,
-                        color: _verified
-                            ? AppTheme.success
-                            : colorScheme.primary,
+                        color:
+                            _verified ? AppTheme.success : colorScheme.primary,
                       ),
                     ),
                   ),
@@ -4256,9 +4269,7 @@ class _FingerprintScanModalState extends State<_FingerprintScanModal> {
                           : colorScheme.primaryContainer),
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: _verified
-                        ? AppTheme.success
-                        : colorScheme.primary,
+                    color: _verified ? AppTheme.success : colorScheme.primary,
                     width: 2.5,
                   ),
                 ),
@@ -4268,9 +4279,7 @@ class _FingerprintScanModalState extends State<_FingerprintScanModal> {
                         ? Icons.check_circle_rounded
                         : Icons.fingerprint_rounded,
                     size: 54,
-                    color: _verified
-                        ? AppTheme.success
-                        : colorScheme.primary,
+                    color: _verified ? AppTheme.success : colorScheme.primary,
                   ),
                 ),
               ),
@@ -4279,7 +4288,9 @@ class _FingerprintScanModalState extends State<_FingerprintScanModal> {
             Text(
               _verified
                   ? 'Fingerprint Confirmed'
-                  : (_scanning ? 'Reading Fingerprint...' : 'Touch Sensor to Sign In'),
+                  : (_scanning
+                      ? 'Reading Fingerprint...'
+                      : 'Touch Sensor to Sign In'),
               style: GoogleFonts.outfit(
                 fontSize: 20,
                 fontWeight: FontWeight.w800,
@@ -4369,7 +4380,8 @@ class _SmsMfaModalState extends State<_SmsMfaModal> {
                     shape: BoxShape.circle,
                   ),
                   child: Center(
-                    child: Icon(Icons.phone_android_rounded, color: colorScheme.primary, size: 22),
+                    child: Icon(Icons.phone_android_rounded,
+                        color: colorScheme.primary, size: 22),
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -4412,7 +4424,8 @@ class _SmsMfaModalState extends State<_SmsMfaModal> {
                 filled: true,
                 fillColor: isDark
                     ? colorScheme.surfaceContainerHigh
-                    : colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
+                    : colorScheme.surfaceContainerHighest
+                        .withValues(alpha: 0.4),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(
@@ -4427,7 +4440,8 @@ class _SmsMfaModalState extends State<_SmsMfaModal> {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: const BorderRadius.all(Radius.circular(14)),
-                  borderSide: BorderSide(color: colorScheme.primary, width: 1.8),
+                  borderSide:
+                      BorderSide(color: colorScheme.primary, width: 1.8),
                 ),
               ),
             ),
@@ -4459,7 +4473,8 @@ class _SmsMfaModalState extends State<_SmsMfaModal> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          valueColor: AlwaysStoppedAnimation<Color>(colorScheme.onPrimary),
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                              colorScheme.onPrimary),
                         ),
                       )
                     : Text(
@@ -4543,7 +4558,8 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
                     shape: BoxShape.circle,
                   ),
                   child: Center(
-                    child: Icon(Icons.shield_outlined, color: colorScheme.primary, size: 22),
+                    child: Icon(Icons.shield_outlined,
+                        color: colorScheme.primary, size: 22),
                   ),
                 ),
                 const SizedBox(width: 14),
@@ -4586,7 +4602,8 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
                 filled: true,
                 fillColor: isDark
                     ? colorScheme.surfaceContainerHigh
-                    : colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
+                    : colorScheme.surfaceContainerHighest
+                        .withValues(alpha: 0.4),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(
@@ -4601,7 +4618,8 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: const BorderRadius.all(Radius.circular(14)),
-                  borderSide: BorderSide(color: colorScheme.primary, width: 1.8),
+                  borderSide:
+                      BorderSide(color: colorScheme.primary, width: 1.8),
                 ),
               ),
             ),
@@ -4610,7 +4628,8 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.timelapse_rounded, size: 16, color: colorScheme.primary),
+                  Icon(Icons.timelapse_rounded,
+                      size: 16, color: colorScheme.primary),
                   const SizedBox(width: 6),
                   Text(
                     'Token refreshes in 24 seconds',
@@ -4640,7 +4659,8 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
                         height: 20,
                         child: CircularProgressIndicator(
                           strokeWidth: 2,
-                          valueColor: AlwaysStoppedAnimation<Color>(colorScheme.onPrimary),
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                              colorScheme.onPrimary),
                         ),
                       )
                     : Text(

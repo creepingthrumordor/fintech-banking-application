@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Central Material 3 Theme Configuration for FinTrust
+/// Central theme configuration for FinTrust
 class AppTheme {
   // Global reactive notifier for switching between Light and Dark mode
   static final ValueNotifier<ThemeMode> themeNotifier =
@@ -17,8 +17,8 @@ class AppTheme {
     themeNotifier.value = mode;
   }
 
-  // Material 3 Purple/Lavender Primary Palette
-  static const Color primarySeed = Color(0xFF6750A4); // M3 Deep Violet
+  // Purple and lavender primary palette
+  static const Color primarySeed = Color(0xFF6750A4); // Deep violet
   static const Color primaryLight = Color(0xFF6750A4);
   static const Color onPrimaryLight = Colors.white;
   static const Color primaryContainerLight = Color(0xFFEADDFF); // Lavender
@@ -74,7 +74,7 @@ class AppTheme {
   static const Color error = Color(0xFFB3261E);
   static const Color errorContainer = Color(0xFFF9DEDC);
 
-  /// Material 3 Light Theme
+  /// Light theme
   static ThemeData get lightTheme {
     const colorScheme = ColorScheme(
       brightness: Brightness.light,
@@ -209,7 +209,7 @@ class AppTheme {
     );
   }
 
-  /// Material 3 Dark Theme
+  /// Dark theme
   static ThemeData get darkTheme {
     const colorScheme = ColorScheme(
       brightness: Brightness.dark,

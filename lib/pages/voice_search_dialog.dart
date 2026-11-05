@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Shows an interactive animated Material 3 Voice Search Sheet
+/// Shows an animated voice search sheet.
 void showVoiceSearchSheet({
   required BuildContext context,
   required Function(String query) onQuerySelected,

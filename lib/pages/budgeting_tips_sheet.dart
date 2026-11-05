@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/models.dart';
 
-/// Shows a comprehensive Material 3 Budgeting Tips Modal Sheet
+/// Shows a budgeting tips modal sheet.
 void showBudgetingTipsSheet({
   required BuildContext context,
 }) {
