@@ -4,6 +4,14 @@ A Flutter banking app prototype based on the screens in `Wireframe/`. It include
 responsive layouts for the dashboard, transfers, cards, activity, personal
 finance, smart search, services, support, and account settings.
 
+## Showcase
+
+
+
+<p align="center">
+  <img src="showcase.png" alt="fintech" width="830">
+</p>
+
 ## Run
 
 ```sh
