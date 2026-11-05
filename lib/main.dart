@@ -1,6 +1,4 @@
-// =============================================================================
 // FinTrust Digital Banking — Material 3 Design Edition
-// =============================================================================
 
 import 'dart:math' as math;
 
@@ -17,9 +15,7 @@ import 'widgets/m3_widgets.dart';
 
 void main() => runApp(const FinTrustApp());
 
-// =============================================================================
-// APP ENTRY POINT — Material 3 with Dynamic Theme Support
-// =============================================================================
+// APP ENTRY POINT: Material 3 with Dynamic Theme Support
 class FinTrustApp extends StatelessWidget {
   const FinTrustApp({super.key});
 
@@ -77,9 +73,7 @@ class FinTrustApp extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // BOTTOM-NAV SHELL
-// =============================================================================
 class _AppShell extends StatefulWidget {
   const _AppShell();
 
@@ -232,9 +226,7 @@ class _AppShellState extends State<_AppShell> {
   }
 }
 
-// =============================================================================
 // PAGE: HOME / DASHBOARD
-// =============================================================================
 class HomePage extends StatelessWidget {
   const HomePage({
     required this.balance,
@@ -265,7 +257,7 @@ class HomePage extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
         children: [
-          // ── Greeting Row & Action Icons ──────────────────────────────────
+          // Greeting Row & Action Icons
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -450,7 +442,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Search Bar with Voice Action ─────────────────────────────────
+          // Search Bar with Voice Action
           M3SearchBar(
             readOnly: true,
             onTap: () => onPush(const SmartSearchPage()),
@@ -466,12 +458,12 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Total Balance Card (Material 3 Purple Gradient) ───────────────
+          // Total Balance Card (Material 3 Purple Gradient)
           _BalanceCard(balance: balance),
 
           const SizedBox(height: 18),
 
-          // ── Personalized Financial Recommendations ───────────────────────
+          // Personalized Financial Recommendations
           M3RecommendationsCarousel(
             recommendations: defaultRecommendations,
             onPush: onPush,
@@ -479,7 +471,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Upcoming Bill Reminders Card ─────────────────────────────────
+          // Upcoming Bill Reminders Card
           M3BillRemindersCard(
             bills: bills.isNotEmpty ? bills : defaultBills,
             onBillPaid: (bill) {
@@ -491,12 +483,12 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Budgeting Tips & Strategies Banner ───────────────────────────
+          // Budgeting Tips & Strategies Banner
           const M3BudgetTipsBanner(),
 
           const SizedBox(height: 18),
 
-          // ── Recent Activity Card ─────────────────────────────────────────
+          // Recent Activity Card
           M3Card(
             child: Column(
               children: [
@@ -528,7 +520,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Savings Goals Card ───────────────────────────────────────────
+          // Savings Goals Card
           M3Card(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -557,7 +549,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Investment Summary Card ──────────────────────────────────────
+          // Investment Summary Card
           M3Card(
             onTap: () => onPush(const FinancePage()),
             child: const Column(
@@ -592,7 +584,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Spending & Savings Snapshot ──────────────────────────────────
+          // Spending & Savings Snapshot
           Row(
             children: [
               Expanded(
@@ -653,7 +645,7 @@ class HomePage extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // ── Fin AI Assistant Banner ──────────────────────────────────────
+          // Fin AI Assistant Banner
           GestureDetector(
             onTap: () => onPush(const AssistantPage()),
             child: Container(
@@ -721,7 +713,7 @@ class HomePage extends StatelessWidget {
   }
 }
 
-// ── Total Balance Card Widget ────────────────────────────────────────────────
+// Total Balance Card Widget
 class _BalanceCard extends StatelessWidget {
   const _BalanceCard({required this.balance});
   final double balance;
@@ -873,9 +865,7 @@ class _AccountTile extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: TRANSFER & PAYMENT
-// =============================================================================
 class TransferPage extends StatefulWidget {
   const TransferPage({
     required this.onTransfer,
@@ -1070,7 +1060,7 @@ class _TransferPageState extends State<TransferPage> {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 18, 20, 32),
         children: [
-          // ── Header ──────────────────────────────────────────────────────
+          // Header
           Text(
             'Money Transfer\n& Payment',
             style: GoogleFonts.outfit(
@@ -1092,7 +1082,7 @@ class _TransferPageState extends State<TransferPage> {
 
           const SizedBox(height: 18),
 
-          // ── Sub-tabs Segmented Pill Bar ──────────────────────────────────
+          // Sub-tabs Segmented Pill Bar
           Container(
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
@@ -1143,7 +1133,7 @@ class _TransferPageState extends State<TransferPage> {
 
           const SizedBox(height: 22),
 
-          // ── Beneficiaries Section ────────────────────────────────────────
+          // Beneficiaries Section
           M3SectionRow(
             title: 'Saved Beneficiaries',
             actionLabel: 'Manage',
@@ -1218,7 +1208,7 @@ class _TransferPageState extends State<TransferPage> {
 
           const SizedBox(height: 24),
 
-          // ── Transfer Amount Section ──────────────────────────────────────
+          // Transfer Amount Section
           Text(
             'Transfer Amount (LKR)',
             style: GoogleFonts.outfit(
@@ -1276,7 +1266,7 @@ class _TransferPageState extends State<TransferPage> {
 
           const SizedBox(height: 28),
 
-          // ── Review Transfer Action Button ────────────────────────────────
+          // Review Transfer Action Button
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
@@ -1347,7 +1337,7 @@ class _TransferPageState extends State<TransferPage> {
 
           const SizedBox(height: 24),
 
-          // ── Quick Services Section ───────────────────────────────────────
+          // Quick Services Section
           M3SectionRow(
             title: 'More Payment Options',
             actionLabel: 'Explore',
@@ -1454,9 +1444,7 @@ class _PayOptionTile extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: CARDS
-// =============================================================================
 class CardsPage extends StatefulWidget {
   const CardsPage({required this.onPush, super.key});
   final ValueChanged<Widget> onPush;
@@ -1788,9 +1776,7 @@ class _CardRow extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: ACTIVITY / TRANSACTIONS
-// =============================================================================
 class ActivityPage extends StatefulWidget {
   const ActivityPage({
     required this.transactions,
@@ -1920,9 +1906,7 @@ class _ActivityPageState extends State<ActivityPage> {
   }
 }
 
-// =============================================================================
 // PAGE: ACCOUNT / SETTINGS (Includes Dark Mode Switch & M3 Controls)
-// =============================================================================
 class AccountPage extends StatelessWidget {
   const AccountPage({
     required this.onPush,
@@ -1965,7 +1949,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 22),
 
-          // ── APPEARANCE & THEME (Requested Dark Mode Switch) ──────────────
+          // APPEARANCE & THEME (Requested Dark Mode Switch)
           const _GroupLabel('APPEARANCE & THEME'),
           const SizedBox(height: 10),
 
@@ -2020,7 +2004,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 20),
 
-          // ── SMART FEATURES ───────────────────────────────────────────────
+          // SMART FEATURES
           const _GroupLabel('SMART FEATURES'),
           const SizedBox(height: 10),
 
@@ -2054,7 +2038,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 20),
 
-          // ── AUTHENTICATION ───────────────────────────────────────────────
+          // AUTHENTICATION
           const _GroupLabel('AUTHENTICATION'),
           const SizedBox(height: 10),
           _SettingsGroup(items: [
@@ -2092,7 +2076,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 20),
 
-          // ── PRIVACY ──────────────────────────────────────────────────────
+          // PRIVACY
           const _GroupLabel('PRIVACY'),
           const SizedBox(height: 10),
           _SettingsGroup(items: [
@@ -2112,7 +2096,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 20),
 
-          // ── OTHER ────────────────────────────────────────────────────────
+          // OTHER
           const _GroupLabel('OTHER'),
           const SizedBox(height: 10),
           _SettingsGroup(items: [
@@ -2138,7 +2122,7 @@ class AccountPage extends StatelessWidget {
 
           const SizedBox(height: 28),
 
-          // ── Sign Out Button ──────────────────────────────────────────────
+          // Sign Out Button
           SizedBox(
             width: double.infinity,
             child: OutlinedButton.icon(
@@ -2162,9 +2146,7 @@ class AccountPage extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: PERSONAL FINANCE & SAVINGS
-// =============================================================================
 class FinancePage extends StatelessWidget {
   const FinancePage({super.key});
 
@@ -2324,9 +2306,7 @@ class FinancePage extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: SMART SEARCH
-// =============================================================================
 class SmartSearchPage extends StatefulWidget {
   final String? initialQuery;
 
@@ -2522,9 +2502,7 @@ class _SmartSearchPageState extends State<SmartSearchPage> {
   }
 }
 
-// =============================================================================
 // PAGE: ALL SERVICES
-// =============================================================================
 class ServicesPage extends StatelessWidget {
   const ServicesPage({super.key});
 
@@ -2590,9 +2568,7 @@ class ServicesPage extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: QR PAYMENT
-// =============================================================================
 class QrPaymentPage extends StatelessWidget {
   const QrPaymentPage({super.key});
 
@@ -2661,9 +2637,7 @@ class QrPaymentPage extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: BILL PAYMENT
-// =============================================================================
 class BillPaymentPage extends StatefulWidget {
   const BillPaymentPage({super.key});
 
@@ -2764,9 +2738,7 @@ class _BillPaymentPageState extends State<BillPaymentPage> {
   }
 }
 
-// =============================================================================
 // PAGE: MOBILE RELOAD
-// =============================================================================
 class MobileReloadPage extends StatefulWidget {
   const MobileReloadPage({super.key});
 
@@ -2848,9 +2820,7 @@ class _MobileReloadPageState extends State<MobileReloadPage> {
   }
 }
 
-// =============================================================================
 // PAGE: FIN ASSISTANT
-// =============================================================================
 class AssistantPage extends StatefulWidget {
   const AssistantPage({super.key});
 
@@ -2980,9 +2950,7 @@ class _AssistantPageState extends State<AssistantPage> {
   }
 }
 
-// =============================================================================
 // PAGE: CARD DETAILS
-// =============================================================================
 class CardDetailsPage extends StatefulWidget {
   const CardDetailsPage({super.key});
 
@@ -3071,9 +3039,7 @@ class _DetailLine extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: SECURITY
-// =============================================================================
 class SecurityPage extends StatefulWidget {
   const SecurityPage({super.key});
 
@@ -3112,9 +3078,7 @@ class _SecurityPageState extends State<SecurityPage> {
   }
 }
 
-// =============================================================================
 // PAGE: NOTIFICATION SETTINGS & NOTIFICATIONS
-// =============================================================================
 class NotificationSettingsPage extends StatefulWidget {
   const NotificationSettingsPage({super.key});
 
@@ -3230,9 +3194,7 @@ class _NotifTile extends StatelessWidget {
   }
 }
 
-// =============================================================================
 // PAGE: AUTHENTICATION
-// =============================================================================
 class AuthenticationPage extends StatefulWidget {
   const AuthenticationPage({super.key});
 
@@ -3616,7 +3578,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── CARD 1: AUTHENTICATION OVERVIEW ───────────────────────
+              // CARD 1: AUTHENTICATION OVERVIEW
               M3Card(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -3647,7 +3609,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
 
               const SizedBox(height: 14),
 
-              // ── CARD 2: LOGIN ──────────────────────────────────────────
+              // CARD 2: LOGIN
               M3Card(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -3818,7 +3780,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
 
               const SizedBox(height: 14),
 
-              // ── CARD 3: BIOMETRIC SIGN IN ──────────────────────────────
+              // CARD 3: BIOMETRIC SIGN IN
               M3Card(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -3858,7 +3820,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
 
               const SizedBox(height: 14),
 
-              // ── CARD 4: MFA OPTIONS ────────────────────────────────────
+              // CARD 4: MFA OPTIONS
               M3Card(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -3898,7 +3860,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
 
               const SizedBox(height: 20),
 
-              // ── BOTTOM SUPPORT SECTION ─────────────────────────────────
+              // BOTTOM SUPPORT SECTION
               Center(
                 child: Text(
                   'Need help signing in?',
@@ -4698,9 +4660,7 @@ class _AuthAppMfaModalState extends State<_AuthAppMfaModal> {
   }
 }
 
-// =============================================================================
 // SHARED WIDGETS
-// =============================================================================
 class _SettingsGroup extends StatelessWidget {
   const _SettingsGroup({required this.items});
   final List<Widget> items;
@@ -5230,9 +5190,7 @@ void _showAddAccountSheet(BuildContext context) {
   );
 }
 
-// =============================================================================
 // UTILITIES
-// =============================================================================
 String _fmt(num amount) {
   final value = amount.round().abs().toString();
   final buffer = StringBuffer();

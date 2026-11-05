@@ -78,7 +78,7 @@ class ConfirmationReceiptPage extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(20, 10, 20, 28),
           child: Column(
             children: [
-              // ── Receipt Card with M3 Elevated Container ─────────────────────
+              // Receipt Card with M3 Elevated Container
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -368,7 +368,7 @@ class ConfirmationReceiptPage extends StatelessWidget {
 
               const SizedBox(height: 24),
 
-              // ── Action Buttons ───────────────────────────────────────────────
+              // Action Buttons
               Row(
                 children: [
                   Expanded(
